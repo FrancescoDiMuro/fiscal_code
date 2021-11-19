@@ -45,7 +45,7 @@ def manageSurname():
     elif num_consonants == 1 and num_vowels == 1:
         ret_val = consonants[0] + num_vowels[0] + "X"
 
-    return "".join(ret_val)
+    return "".join(ret_val).upper()
 
 
 def manage_name():
@@ -71,7 +71,7 @@ def manage_name():
     elif num_consonants == 0 and num_vowels == 2:
         ret_val = vowels + "X"
 
-    return "".join(ret_val)
+    return "".join(ret_val).upper()
 
 
 def manage_birth_date_and_sex():
@@ -86,7 +86,7 @@ def manage_birth_date_and_sex():
     months = [chr(c) for c in range(ord("A"), ord("T") + 1) if chr(c) not in ["F", "G", "I", "J", "K", "N", "O", "Q"]]
     month = months[month]
 
-    if sex == "F":
+    if sex.upper() == "F":
         day = int(day)
         day += 30
 
